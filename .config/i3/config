@@ -198,8 +198,16 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-bar {
-        status_command i3status
-}
+#gaps for windows
+gaps inner 6
+#gaps outer 0
+#smart_gaps on
+
+# Title bar
+#default_border pixel 2
+#default_floating_border pixel 1
+for_window [class="^.*"] border pixel 2
+
+# picom for radius shadows and transparency.
+exec --no-startup-id picom --config ~/.config/picom/picom.conf --experimental-backends
+exec_always --no-startup-id ~/.config/polybar/launch.sh 
