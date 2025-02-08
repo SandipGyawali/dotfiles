@@ -198,6 +198,10 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+#Screen shots
+bindsym --release Print exec scrot -s ~/Pictures/Screenshots/%Y-%m-%d_%H-%M-%S.png
+
+
 #gaps for windows
 gaps inner 6
 #gaps outer 0
