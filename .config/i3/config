@@ -34,7 +34,6 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nitrogen --restore
 # restore is for restoring the last set wallpaper when logged in again.
 
-
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
@@ -201,7 +200,6 @@ bindsym $mod+r mode "resize"
 #Screen shots
 bindsym --release Print exec scrot -s ~/Pictures/Screenshots/%Y-%m-%d_%H-%M-%S.png
 
-
 #gaps for windows
 gaps inner 6
 #gaps outer 0
@@ -210,7 +208,10 @@ gaps inner 6
 # Title bar
 #default_border pixel 2
 #default_floating_border pixel 1
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 3
+
+# wifi config
+exec --no-startup-id nm-applet
 
 # picom for radius shadows and transparency.
 exec --no-startup-id picom --config ~/.config/picom/picom.conf --experimental-backends
