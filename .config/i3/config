@@ -215,4 +215,6 @@ exec --no-startup-id nm-applet
 
 # picom for radius shadows and transparency.
 exec --no-startup-id picom --config ~/.config/picom/picom.conf --experimental-backends
-exec_always --no-startup-id ~/.config/polybar/launch.sh 
+exec_always --no-startup-id ~/.config/polybar/launch.sh
+
+exec --no-startup-id blueman-applet 
